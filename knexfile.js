@@ -5,37 +5,37 @@
  */
 
 module.exports = {
-  // development: {
-  //   client: "sqlite3",
-  //   connection: {
-  //      filename: "./data/editora.db3",
-  //   },
-  //   useNullAsDefault: true,
-  //   migrations: {
-  //    directory: "./data/migrations",
-  //   },
-  //  seeds: {
-  //    directory: "./data/seeds",
-  //  },
-  //  },
-
   development: {
-    client: "pg",
+    client: "sqlite3",
     connection: {
-      host: "postgres-ag-br1-4.hospedagemelastica.com.br",
-      port: 54148,
-      database: "ausfsg_livros",
-      user: "ausfsg_alexandre",
-      password: "Linuxmall200483",
-    },
-    pool: {
-      min: 2,
-      max: 10,
+      filename: "./data/editora.db3",
     },
     useNullAsDefault: true,
     migrations: {
       directory: "./data/migrations",
     },
-    seeds: { directory: "./data/seeds" },
+    seeds: {
+      directory: "./data/seeds",
+    },
   },
+
+  // development: {
+  //    client: "pg",
+  //    connection: {
+  //    host: "postgres-ag-br1-4.hospedagemelastica.com.br",
+  //    port: 54148,
+  //     database: "ausfsg_livros",
+  //     user: "ausfsg_alexandre",
+  //     password: "Linuxmall200483",
+  //  },
+  //   pool: {
+  //    min: 2,
+  //     max: 10,
+  //  },
+  //   useNullAsDefault: true,
+  //   migrations: {
+  //    directory: "./data/migrations",
+  //   },
+  //  seeds: { directory: "./data/seeds" },
+  //  },
 };
