@@ -2,7 +2,7 @@ const express = require("express");
 
 const app = express();
 
-const port = 3001;
+const port = 3000;
 
 // para reconhecer os dados recebidos como sendo um objeto no formato JSON
 app.use(express.json());
