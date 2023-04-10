@@ -9,6 +9,7 @@
     "knexfile",
     "Linuxmall",
     "mqmswm",
+    "PGHOST",
     "postgres",
     "postgresql",
     "Postgresql",

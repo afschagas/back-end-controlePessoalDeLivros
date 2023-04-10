@@ -4,6 +4,8 @@
  * @type { Object.<string, import("knex").Knex.Config> }
  */
 
+require("dotenv").config();
+
 module.exports = {
   //  development: {
   //   client: "sqlite3",
@@ -21,13 +23,7 @@ module.exports = {
 
   development: {
     client: "pg",
-    connection: {
-      host: "postgres-ag-br1-4.hospedagemelastica.com.br",
-      port: 54114,
-      database: "mqmswm_livros",
-      user: "mqmswm_alexandre",
-      password: "Linuxmall200483",
-    },
+    connection: process.env.PGHOST,
     pool: {
       min: 2,
       max: 10,
