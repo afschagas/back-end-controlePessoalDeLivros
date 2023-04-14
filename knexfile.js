@@ -7,28 +7,15 @@
 require("dotenv").config();
 
 module.exports = {
-  //  development: {
-  //   client: "sqlite3",
-  //   connection: {
-  //    filename: "./data/editora.db3",
-  //  },
-  //  useNullAsDefault: true,
-  //  migrations: {
-  //   directory: "./data/migrations",
-  // },
-  //  seeds: {
-  //   directory: "./data/seeds",
-  // },
-  // },
-
-  production: {
-    client: "pg",
-    connection: process.env.PGHOST,
-    pool: {
-      min: 2,
-      max: 10,
+  development: {
+    client: process.env.PGCLIENT,
+    connection: {
+      database: process.env.PGDATABASE,
+      user: process.env.PGUSER,
+      password: process.env.PGPASSWORD,
+      host: process.env.PGHOST,
+      port: process.env.PGPORT,
     },
-    useNullAsDefault: true,
     migrations: {
       directory: "./data/migrations",
     },
